@@ -1,0 +1,39 @@
+site_name: Neuropod
+theme:
+  name: 'material'
+
+google_analytics:
+  - UA-7627242-14
+  - auto
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+nav:
+  - Welcome: index.md
+  - Installing: installing.md
+  - Tutorials:
+      - Basic Introduction: tutorial.md
+  - Packaging API:
+      - TensorFlow: packagers/tensorflow.md
+      - PyTorch: packagers/pytorch.md
+      - TorchScript: packagers/torchscript.md
+      - Keras: packagers/keras.md
+  - Python Guide: pyguide.md
+  - C++ Guide: cppguide.md
+  - Advanced:
+      - Efficient Tensor Creation: advanced/efficient_tensor_creation.md
+      - Out-of-process Execution: advanced/ope.md
+  - Developing Neuropod: developing.md
